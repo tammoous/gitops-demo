@@ -3,9 +3,9 @@ kind: Kustomization
 namespace: guestbook-prod
 resources:
 - ../../base 
-patchesStrategicMerge:
-- deployment-patch.yml
-- ingress.yml
+patches:
+- path: deployment-patch.yml
+- path: ingress.yml
 labels:
  - includeSelectors: true
    pairs:
