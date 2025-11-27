@@ -1,0 +1,13 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: guestbook-staging
+resources:
+  - ../ ../base
+patchesStrategicMerge:
+  - deployment-patch.yml
+  - service-patch.yml
+commonLabels:
+  environment: staging
+images:
+  - name: gcr.io/heptio-images/ks-guestbook-demo
+    newTag: "0.2"
