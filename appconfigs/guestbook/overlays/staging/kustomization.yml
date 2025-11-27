@@ -3,9 +3,9 @@ kind: Kustomization
 namespace: guestbook-staging
 resources:
   - ../../base 
-patchesStrategicMerge:
-  - deployment-patch.yml
-  - service-patch.yml
+patches:
+  #- deployment-patch.yml
+  - path: service-patch.yml
 labels:
  - includeSelectors: true
    pairs:
