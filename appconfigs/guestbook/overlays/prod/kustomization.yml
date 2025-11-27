@@ -4,8 +4,8 @@ namespace: guestbook-prod
 resources:
 - ../../base 
 patchesStrategicMerge:
-- deployment-patch.yaml
-- ingress.yaml
+- deployment-patch.yml
+- ingress.yml
 labels:
  - includeSelectors: true
    pairs:
