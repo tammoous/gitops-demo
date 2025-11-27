@@ -5,7 +5,7 @@ resources:
 - ../../base 
 patches:
 - path: deployment-patch.yml
-- path: ingress.yml
+#- path: ingress.yml
 labels:
  - includeSelectors: true
    pairs:

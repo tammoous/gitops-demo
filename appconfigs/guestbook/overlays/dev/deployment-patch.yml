@@ -8,7 +8,7 @@ spec:
     spec:
       containers:
         - name: guestbook
-          image: gcr.io/heptio-images/ks-guestbook-demo:0.2
+          image: gcr.io/heptio-images/ks-guestbook-demo:0.1
           resources:
             requests:
               memory: "64Mi"
