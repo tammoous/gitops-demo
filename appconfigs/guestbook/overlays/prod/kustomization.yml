@@ -6,8 +6,10 @@ resources:
 patchesStrategicMerge:
 - deployment-patch.yaml
 - ingress.yaml
-commonLabels:
-  environment: production
+labels:
+ - includeSelectors: true
+   pairs:
+      env: production
 images:
 - name: gcr.io/heptio-images/ks-guestbook-demo
   newTag: "0.1"

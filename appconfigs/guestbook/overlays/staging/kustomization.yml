@@ -6,8 +6,10 @@ resources:
 patchesStrategicMerge:
   - deployment-patch.yml
   - service-patch.yml
-commonLabels:
-  environment: staging
+labels:
+ - includeSelectors: true
+   pairs:
+      env: staging
 images:
   - name: gcr.io/heptio-images/ks-guestbook-demo
     newTag: "0.2"
