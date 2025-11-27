@@ -8,7 +8,7 @@ spec:
     spec:
       containers:
         - name: guestbook
-          $patch: merge
+          image: gcr.io/heptio-images/ks-guestbook-demo:0.2
           resources:
             requests:
               memory: "64Mi"
