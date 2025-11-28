@@ -1,0 +1,8 @@
+image:
+  repository: node
+  tag: "16-alpine"
+service:
+  port: 3000
+env:
+  DATABASE_URL: "postgresql://webapp:webapp123@webapp-release-new-postgresql:5432/webapp"
+  REDIS_URL: "redis://webapp-release-new-redis-master:6379"
